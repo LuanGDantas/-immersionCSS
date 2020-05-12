@@ -1,0 +1,36 @@
+body{
+  background-image: url('https://wallpapercave.com/wp/wp5380884.jpg');
+  background-size: 215vh auto;
+  font-family: Verdana, Geneva, Tahoma; 
+  height: 100vh; 
+}
+
+.menu {
+  background-color: #131313d2;
+}
+
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: #FFB300;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.site-title {
+  color: whitesmoke;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.site-subtitle {
+  color: whitesmoke;
+  font-style: italic;
+  text-align: center;
+}
