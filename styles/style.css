@@ -7,20 +7,19 @@
 }
 
 body{
-  background-image: url('../img/LuanDantas_portifolio.png');
-  background-size: 100vw 90vh;
-  background-repeat: no-repeat;
-  height: 100vh;
   font-family: 'DM Mono', monospace;
   font-size: 13px;
 }
 
 header {
+  background-image: url('../img/LuanDantas_portifolio.png');
+  background-repeat: no-repeat;
+  background-size: 100vw 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  height: 90vh;
+  height: 85vh;
 }
 
 .menu {
@@ -92,8 +91,7 @@ a:hover{
 }
 
 .projetos {
-  margin-top: 1.5em;
-  padding: 2em;
+  padding-top: 4em;
   min-height: 90vh;
   background-color: whitesmoke;
 }
@@ -135,7 +133,7 @@ a:hover{
 }
 
 .contato {
-  padding: 2em;
+  padding-top: 4em;
   min-height: 32vh;
   background-color: #005c80;
 }
