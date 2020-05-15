@@ -12,24 +12,13 @@ body{
   background-repeat: no-repeat;
   height: 100vh;
   font-family: 'DM Mono', monospace;
-  font-size: 10px;
-}
-
-@media (min-width: 360px) {
-  body {
-    font-size: 10px;
-  }
-}
-
-@media (min-width: 600px) {
-  body {
-    font-size: 18px;
-  }
+  font-size: 13px;
 }
 
 header {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   height: 90vh;
 }
@@ -39,18 +28,12 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
 
 .menu ul{
   display: flex;
   justify-content: center;
-}
-
-@media (min-width: 600px) {
-  .menu ul{
-    justify-content: flex-end;
-    margin-inline-end: 7em;
-  }
 }
 
 .menu li {
@@ -66,8 +49,17 @@ header {
   color: #FFB300;
   display: block;
   font-weight: bolder;
-  padding: 0.9em 2em 0.9em 2em;
-  opacity: 85%;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  transition: background-color 1s, color 1s;  
+}
+
+.menu a:hover {
+  background-color: #FFB300;
+  color: black;
+}
+
+a {
+  color: #FFB300;
   text-decoration: none;
 }
 
@@ -77,10 +69,6 @@ a:hover{
 }
 
 .titles {  
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 7em;
   backdrop-filter: brightness(60%);
 }
 
@@ -88,7 +76,7 @@ a:hover{
   color: #ffffff;
   text-shadow: 0 0 0.3em rgb(0, 0, 0), 0 0 0.3em rgb(0, 0, 0);
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2.5em;
   font-family: 'Fira Code', monospace;
   text-align: center;
 }
@@ -104,44 +92,26 @@ a:hover{
 }
 
 .projetos {
+  margin-top: 1.5em;
   padding: 2em;
-  height: 100vh;
+  min-height: 90vh;
+  background-color: whitesmoke;
 }
 
+.contato h2,
 .projetos h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: bolder;
-  padding-left: 3.5em;
-  margin-bottom: 1.5em;
+  padding-left: 3em;
 }
 
 .projetos .grid {
+  margin-top: 1.5em;
   display: grid;
   align-content: center;
   justify-content: center;
   gap: 2em;
   font-size: 16px;
-}
-
-@media (min-width: 360px) {
-  .projetos figure {
-    margin-bottom: 2em;
-  }
-}
-
-@media (min-width: 560px) {
-  .projetos .grid {
-    grid-template-columns: 240px 240px;
-    margin-block-end: 2em;
-  }
-}
-
-@media (min-width: 880px) {
-  .projetos .grid {
-    grid-template-columns: repeat(3, 240px);
-    gap: 2.7em;
-    height: calc(100vh - 10em - 48px);
-  }
 }
 
 .projetos figure {
@@ -157,10 +127,126 @@ a:hover{
   height: 180px;
   width: 240px;
   object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.img-projetos:hover {
+  transform: scale(1.2);
+}
+
+.contato {
+  padding: 2em;
+  min-height: 32vh;
+  background-color: #005c80;
+}
+
+.contato .icons {
+  margin-top: 2.5em;
+  padding: 0;
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 5em;
+  transition: text-shadow 0.5s;
+}
+
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
 }
 
 
 
+@media (min-width: 360px) {
 
+  .projetos figure {
+    margin-bottom: 2em;
+  }
+
+  .contato h2,
+  .projetos h2 {
+    padding-left: 1em;
+  }
+}
+
+@media (min-width: 560px) {
+  .menu ul{
+    justify-content: flex-end;
+    margin-inline-end: 1em;
+  }
+
+  .contato h2,
+  .projetos h2 {
+    padding-left: 1em;
+  }
+
+  .projetos .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  header {
+    justify-content: flex-start;
+  }
+
+  .menu ul{
+    margin-inline-end: 5em;
+  }
+
+  .menu a {
+    padding: 0.5em 2em 0.5em 2em;
+  }
+
+  .contato h2,
+  .projetos h2 {
+    padding-left: 3em;
+  }
+
+  .projetos .grid {
+    margin-top: 2em;
+    grid-template-columns: repeat(3, 240px);
+    gap: 2em;
+    height: calc(100vh - 180px);
+    font-size: 18px;
+  }
+
+  .titles {  
+    margin-left: 8em;
+  }
+}
+
+@media (min-width: 1240px){
+  .menu a {
+    font-size: 18px;
+    padding: 0.5em 2em 0.5em 2em;
+  }
+
+  .titles{
+    font-size: 1.5em;
+  }
+
+  .projetos{
+    min-height: 60vh;
+  }
+
+  .projetos .grid {
+    grid-template-columns: repeat(4, 240px);
+    height: calc(100vh - 400px);
+    font-size: 20px;
+  }
+
+  .contato {
+    min-height: 40vh;
+  }
+
+  .contato h2,
+  .projetos h2 {
+    font-size: 2.2em;
+    padding-left: 5em;
+  }
+}
 
 

@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/style.css">
   <title>The page of the Luan Dantas</title>
+  <script src="https://kit.fontawesome.com/ade55217c4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
-    <nav class="menu">
+    <nav class="menu" id="home">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
     <div class="titles">
@@ -25,7 +26,7 @@
   </header>
 </body>
 
-<section class="projetos">
+<section class="projetos" id="projetos">
   <h2>Projetos</h2>
 
   <div class="grid">
@@ -47,4 +48,24 @@
     </figure>
   </div>
 </section>
+
+<section class="contato" id="contato">
+  <h2>Contato</h2>
+  <div class="grid icons">
+    <a target="_blank" href="https://github.com/vanessametonini">
+      <i class="fab fa-github"></i>
+    </a>
+    <a target="_blank" href="https://twitter.com/vanessametonini">
+      <i class="fab fa-twitter"></i>
+
+    </a>
+    <a target="_blank" href="https://linkedin.com/in/vanessametonini">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="mailto:vanessa.tonini@caelum.com.br">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+</section>
+
 </html>
